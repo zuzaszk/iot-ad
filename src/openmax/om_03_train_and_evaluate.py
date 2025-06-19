@@ -6,39 +6,9 @@ from sklearn.metrics import accuracy_score, f1_score
 import pickle
 import time
 from om_01_model import OpenMaxClassifier
+from om_02_param_selection import create_open_set_scenario
 import warnings
 warnings.filterwarnings('ignore')
-
-
-def create_open_set_scenario(X, y, classes, known_classes_ratio=0.7, random_state=42):
-    """
-    Create open set scenario by selecting a subset of classes as known classes.
-    """
-    np.random.seed(random_state)
-    
-    unique_classes = np.unique(y)
-    num_known_classes = int(len(unique_classes) * known_classes_ratio)
-    
-    # Select known classes (ensure we have enough samples for each)
-    class_counts = pd.Series(y).value_counts()
-    # Sort by count and take top classes to ensure sufficient samples
-    known_classes = class_counts.head(num_known_classes).index.values
-    unknown_classes = np.setdiff1d(unique_classes, known_classes)
-    
-    # Split data
-    known_mask = np.isin(y, known_classes)
-    unknown_mask = np.isin(y, unknown_classes)
-    
-    X_known = X[known_mask]
-    y_known = y[known_mask]
-    X_unknown = X[unknown_mask]
-    y_unknown = y[unknown_mask]
-    
-    # Remap known class labels to 0, 1, 2, ...
-    label_mapping = {old_label: new_label for new_label, old_label in enumerate(known_classes)}
-    y_known_remapped = np.array([label_mapping[label] for label in y_known])
-    
-    return X_known, y_known_remapped, X_unknown, y_unknown, known_classes, unknown_classes, label_mapping
 
 
 def evaluate_fold(classifier, X_test, y_test, known_classes):
