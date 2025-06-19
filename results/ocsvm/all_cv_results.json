@@ -1,0 +1,98 @@
+[
+    {
+        "params": {
+            "gamma": "scale",
+            "kernel": "rbf",
+            "nu": 0.01
+        },
+        "avg_false_positive_rate": 0.06143290890585966
+    },
+    {
+        "params": {
+            "gamma": "scale",
+            "kernel": "rbf",
+            "nu": 0.05
+        },
+        "avg_false_positive_rate": 0.037581717116360505
+    },
+    {
+        "params": {
+            "gamma": "scale",
+            "kernel": "rbf",
+            "nu": 0.1
+        },
+        "avg_false_positive_rate": 0.10572708056055742
+    },
+    {
+        "params": {
+            "gamma": "scale",
+            "kernel": "sigmoid",
+            "nu": 0.01
+        },
+        "avg_false_positive_rate": 0.22275299459798012
+    },
+    {
+        "params": {
+            "gamma": "scale",
+            "kernel": "sigmoid",
+            "nu": 0.05
+        },
+        "avg_false_positive_rate": 0.05795973039721571
+    },
+    {
+        "params": {
+            "gamma": "scale",
+            "kernel": "sigmoid",
+            "nu": 0.1
+        },
+        "avg_false_positive_rate": 0.1789293324697693
+    },
+    {
+        "params": {
+            "gamma": "auto",
+            "kernel": "rbf",
+            "nu": 0.01
+        },
+        "avg_false_positive_rate": 0.8701228870557923
+    },
+    {
+        "params": {
+            "gamma": "auto",
+            "kernel": "rbf",
+            "nu": 0.05
+        },
+        "avg_false_positive_rate": 0.8911028803655437
+    },
+    {
+        "params": {
+            "gamma": "auto",
+            "kernel": "rbf",
+            "nu": 0.1
+        },
+        "avg_false_positive_rate": 0.899178038903084
+    },
+    {
+        "params": {
+            "gamma": "auto",
+            "kernel": "sigmoid",
+            "nu": 0.01
+        },
+        "avg_false_positive_rate": 0.10565149498587219
+    },
+    {
+        "params": {
+            "gamma": "auto",
+            "kernel": "sigmoid",
+            "nu": 0.05
+        },
+        "avg_false_positive_rate": 0.10029360227183762
+    },
+    {
+        "params": {
+            "gamma": "auto",
+            "kernel": "sigmoid",
+            "nu": 0.1
+        },
+        "avg_false_positive_rate": 0.09999148772624071
+    }
+]

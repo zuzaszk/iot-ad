@@ -1,0 +1,5 @@
+{
+    "gamma": "scale",
+    "kernel": "rbf",
+    "nu": 0.05
+}

@@ -1,0 +1,8 @@
+{
+    "batch_size": 128,
+    "contamination": 0.01,
+    "epochs": 20,
+    "hidden_dim": 16,
+    "loss_fn": "mse",
+    "lr": 0.001
+}
