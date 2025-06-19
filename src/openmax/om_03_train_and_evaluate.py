@@ -2,12 +2,9 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, f1_score
 import pickle
 import time
-import matplotlib.pyplot as plt
-import seaborn as sns
 from om_01_model import OpenMaxClassifier
 import warnings
 warnings.filterwarnings('ignore')
@@ -298,14 +295,12 @@ except FileNotFoundError:
         'patience': 15
     }
 
-# Standardize features
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+
 
 # Create open set scenario
 print("Creating open set scenario...")
 X_known, y_known, X_unknown, y_unknown, known_classes, unknown_classes, label_mapping = create_open_set_scenario(
-    X_scaled, y, classes, known_classes_ratio=0.7, random_state=42
+    X, y, classes, known_classes_ratio=0.7, random_state=42
 )
 
 print(f"Known classes: {len(known_classes)} ({known_classes})")

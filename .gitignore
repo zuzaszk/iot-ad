@@ -2,4 +2,4 @@ data
 __pycache__
 *.pyc
 draft.py
-README.md
+results/om/training_evaluation_results.json

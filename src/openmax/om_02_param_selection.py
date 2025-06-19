@@ -136,15 +136,15 @@ def parameter_selection():
     param_grid = {
         'hidden_dims': [
             [64, 32],
-            [128, 64, 32],
+            # [128, 64, 32],
             [256, 128, 64]
         ],
-        'alpha': [5, 10, 15],
+        'alpha': [10],
         'distance_type': ['euclidean', 'cosine'],
-        'tailsize': [10, 20, 30],
+        'tailsize': [10, 30],
         'epochs': [50],  # Reduced for faster parameter search
         'batch_size': [256],
-        'lr': [0.001, 0.0001],
+        'lr': [0.001],
         'patience': [10]
     }
     
