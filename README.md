@@ -6,22 +6,33 @@ This project benchmarks multiple anomaly detection models to evaluate their perf
 
 ---
 
+
 ##  Project Structure
 
 ```
 iot-ad/
-│
-├── models/                 # Training scripts and model definitions
-├── results/                # Evaluation metrics and visualizations
-│   ├── ae/                 # Autoencoder results
-│   ├── iforest/            # Isolation Forest results
-│   ├── ocsvm/              # One-Class SVM results
-│   └── openmax/            # OpenMax results
-│
-├── best_base_model.pth     # Pretrained model weights (PyTorch)
-├── README.md               # Project documentation
-├── .gitignore
-└── .gitattributes
+├── src/                          # Source code
+│   ├── preprocessing.py            # Data preprocessing pipeline
+│   ├── autoencoder/                # Autoencoder implementation
+│   │   ├── ae_01_model.py                # Model architecture
+│   │   ├── ae_02_parameter_selection.py  # Hyperparameter tuning
+│   │   └── ae_03_train_and_evaluate.py    # Training and evaluation
+│   ├── iforest/                    # Isolation Forest implementation
+│   │   ├── if_01_load_data.py             # Data loading utilities
+│   │   ├── if_02_parameter_selection.py   # Parameter optimization
+│   │   └── if_03_train_and_evaluate.py    # Model training
+│   ├── svm/                      # One-Class SVM implementation
+│   └── openmax/                  # OpenMax implementation
+├── results/                      # Evaluation results and metrics
+│   ├── ae/                      # Autoencoder results
+│   ├── iforest/                 # Isolation Forest results
+│   ├── ocsvm/                   # One-Class SVM results
+│   └── openmax/                 # OpenMax results
+├── data/                        # Data directory
+│   ├── raw/                     # Raw dataset files
+│   └── processed/               # Preprocessed data
+└── README.md                    # Project documentation
+
 ```
 
 ---
