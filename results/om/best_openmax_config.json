@@ -1,0 +1,14 @@
+{
+    "hidden_dims": [
+        256,
+        128,
+        64
+    ],
+    "alpha": 10,
+    "distance_type": "cosine",
+    "tailsize": 10,
+    "epochs": 50,
+    "batch_size": 256,
+    "lr": 0.001,
+    "patience": 10
+}

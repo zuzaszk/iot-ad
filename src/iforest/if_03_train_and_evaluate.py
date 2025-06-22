@@ -14,7 +14,7 @@ param_grid = {
     "n_jobs": [-1]
 }
 
-output_dir = "results/iforest2"
+output_dir = "results/iforest"
 X_train, X_test, y_test = baseline_load_data()
 best_model, _ = parameter_selection(X_train, param_grid, output_dir=output_dir)
 

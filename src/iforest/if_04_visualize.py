@@ -8,6 +8,9 @@ results_dir = "results/iforest"
 png_dir = f'{results_dir}/png'
 pdf_dir = f'{results_dir}/pdf'
 
+os.makedirs(png_dir, exist_ok=True)
+os.makedirs(pdf_dir, exist_ok=True)
+
 # Load cross-validation results
 with open(f'{results_dir}/all_cv_results.json', 'r') as f:
     cv_results = json.load(f)
