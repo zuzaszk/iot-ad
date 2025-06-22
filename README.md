@@ -9,7 +9,7 @@ This project benchmarks multiple anomaly detection models to evaluate their perf
 ##  Project Structure
 
 ```
-iot-ad-main/
+iot-ad/
 │
 ├── models/                 # Training scripts and model definitions
 ├── results/                # Evaluation metrics and visualizations
@@ -48,7 +48,6 @@ The following models are implemented and evaluated:
 
 The project uses the **[CIC IoT Dataset 2023](https://www.unb.ca/cic/datasets/iotdataset-2023.html)**, which includes benign and malicious behaviors across various smart home IoT devices. The dataset is already preprocessed for this project.
 
-**Note:** Due to dataset licensing, users should download and place the dataset manually if not already provided.
 
 ---
 
@@ -77,20 +76,6 @@ Evaluation reports (in JSON and PDF) are saved in the `results/` directory. For 
 
 ---
 
-##  Key Insights
-
-- Autoencoder showed superior detection capability for subtle anomalies.
-- Isolation Forest was efficient and interpretable for quick deployment.
-- OpenMax captured unknown anomaly classes effectively.
-
----
-
-
-##  Contributing
-
-Feel free to fork the repository and submit pull requests. Bug fixes, documentation improvements, and new features are welcome!
-
----
 
 ##  License
 
