@@ -68,38 +68,6 @@ Examples include:
 
 ---
 
-##  How to Run
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/iot-ad-main.git
-cd iot-ad-main
-```
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-If `requirements.txt` is not provided, install typical packages manually:
-
-```bash
-pip install numpy pandas scikit-learn matplotlib seaborn torch
-```
-
-### 3. Train and Evaluate Models
-
-Each model has a corresponding training and evaluation script, e.g.:
-
-```bash
-python train_autoencoder.py
-python evaluate_autoencoder.py
-```
-
----
-
 ##  Example Outputs
 
 Evaluation reports (in JSON and PDF) are saved in the `results/` directory. For example:
@@ -117,13 +85,6 @@ Evaluation reports (in JSON and PDF) are saved in the `results/` directory. For 
 
 ---
 
-##  Future Work
-
-- Integrate LSTM-based time series models.
-- Expand evaluation to newer IoT datasets.
-- Deploy models on edge devices using ONNX or TensorFlow Lite.
-
----
 
 ##  Contributing
 
@@ -133,4 +94,4 @@ Feel free to fork the repository and submit pull requests. Bug fixes, documentat
 
 ##  License
 
-This project is open-source,
+This project is open-source.
